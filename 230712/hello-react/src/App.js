@@ -1,9 +1,15 @@
-import MyComponent from "./MyComponent";
+import React from 'react';
+// import Pratice from './230714-pratice';
+import ScrollBox from './ScrollBox';
 
-const App = () => {
-  return 
-  // eslint-disable-next-line no-unreachable
-  <MyComponent name='react' age={1}>리액트</MyComponent>
+
+function App() {
+  return (
+    <div>
+      <ScrollBox  ref={(ref) => this.scrollBox=ref}/>
+      <button onClick={() => this.scrollBox.scrollToBottom}>맨 밑으로</button>
+    </div>
+  );
 }
 
 export default App;
